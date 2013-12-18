@@ -1,0 +1,14 @@
+{
+	"name":"pwf-decorator",
+	"main":"lib/decorator.js",
+	"ignore":[
+		"test",
+		"LICENSE",
+		"README.md",
+		".gitignore",
+		"node_modules"
+	],
+	"dependencies":{
+		"pwf-jquery-compat":"*"
+	}
+}

@@ -1,0 +1,19 @@
+{
+	"name":"pwf-decorator",
+	"version":"1.0.0",
+	"description":"Input decorator for pwf",
+	"author":"just-paja <just-paja@gmail.com>",
+	"license":"GPLv3",
+	"main":"./lib/decorator.js",
+	"dependencies":{
+		"pwf-jquery-compat":"*"
+	},
+	"license":"GPLv3",
+	"scripts":{
+		"test":"echo Running tests... && mocha --globals testRule"
+	},
+	"repository":{
+		"type":"git",
+		"url":"https://github.com/just-paja/pwf-decorator.git"
+	}
+}
