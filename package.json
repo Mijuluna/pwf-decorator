@@ -15,5 +15,9 @@
 	"repository":{
 		"type":"git",
 		"url":"https://github.com/just-paja/pwf-decorator.git"
-	}
+	},
+
+	"files":[
+		"lib/decorator"
+	]
 }
