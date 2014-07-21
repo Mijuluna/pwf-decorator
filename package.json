@@ -1,6 +1,6 @@
 {
 	"name":"pwf-decorator",
-	"version":"1.0.4",
+	"version":"1.0.5",
 	"description":"Input decorator for pwf",
 	"author":"just-paja <just-paja@gmail.com>",
 	"license":"GPLv3",
@@ -21,7 +21,7 @@
 		"url":"https://github.com/just-paja/pwf-decorator.git"
 	},
 
-	"files":[
+	"include":[
 		"lib/decorator"
 	]
 }
