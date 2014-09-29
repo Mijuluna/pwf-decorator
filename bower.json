@@ -1,6 +1,10 @@
 {
 	"name":"pwf-decorator",
-	"main":"lib/decorator.js",
+	"main":[
+		"lib/decorator.js",
+		"lib/abstract",
+		"lib/deco"
+	],
 	"ignore":[
 		"test",
 		"LICENSE",
