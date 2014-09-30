@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+		<!-- pwf.js base -->
+		<script type="text/javascript" src="https://raw.githubusercontent.com/just-paja/pwf.js/master/lib/pwf.js"></script>
+		<script type="text/javascript" src="https://raw.githubusercontent.com/just-paja/pwf.js/master/lib/models/container.js"></script>
+		<script type="text/javascript" src="https://raw.githubusercontent.com/just-paja/pwf.js/master/lib/models/domel.js"></script>
+		<script type="text/javascript" src="https://raw.githubusercontent.com/just-paja/pwf.js/master/lib/models/caller.js"></script>
+
+		<!-- jQuery -->
+		<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="https://raw.githubusercontent.com/just-paja/pwf-jquery-compat/master/lib/jquery-compat.js"></script>
+		<script type="text/javascript" src="https://raw.githubusercontent.com/just-paja/pwf-jquery-compat/master/lib/objects/struct.js"></script>
+
+		<!-- Form rendering -->
+		<script type="text/javascript" src="https://raw.githubusercontent.com/just-paja/pwf-form/master/lib/form.js"></script>
+		<script type="text/javascript" src="https://raw.githubusercontent.com/just-paja/pwf-form/master/lib/form/container.js"></script>
+		<script type="text/javascript" src="https://raw.githubusercontent.com/just-paja/pwf-form/master/lib/input.js"></script>
+		<script type="text/javascript" src="https://raw.githubusercontent.com/just-paja/pwf-form/master/lib/input/abstract/options.js"></script>
+		<script type="text/javascript" src="https://raw.githubusercontent.com/just-paja/pwf-form/master/lib/input/abstract/numbers.js"></script>
+		<script type="text/javascript" src="https://raw.githubusercontent.com/just-paja/pwf-form/master/lib/input/hidden.js"></script>
+		<script type="text/javascript" src="https://raw.githubusercontent.com/just-paja/pwf-form/master/lib/input/select.js"></script>
+		<script type="text/javascript" src="https://raw.githubusercontent.com/just-paja/pwf-form/master/lib/input/radio.js"></script>
+		<script type="text/javascript" src="https://raw.githubusercontent.com/just-paja/pwf-form/master/lib/input/checkbox.js"></script>
+
+		<!-- Input decorator -->
+		<script type="text/javascript" src="../lib/abstract/deco.js"></script>
+		<script type="text/javascript" src="../lib/abstract/deco/box.js"></script>
+		<script type="text/javascript" src="../lib/abstract/deco/menu.js"></script>
+		<script type="text/javascript" src="../lib/deco/select/opt.js"></script>
+		<script type="text/javascript" src="../lib/deco/select.js"></script>
+		<script type="text/javascript" src="../lib/deco/checkbox.js"></script>
+		<script type="text/javascript" src="../lib/deco/radio.js"></script>
+		<script type="text/javascript" src="../lib/decorator.js"></script>
+
+		<!-- Create page content -->
+		<script type="text/javascript">
+			var
+				inputs = [
+					// Select input
+					{
+						'label':'Input typed select',
+						'type':'select',
+						'options':[
+							{
+								'name':'foo',
+								'value':1
+							},
+							{
+								'name':'bar',
+								'value':1
+							}
+						]
+					},
+
+					// Checkbox input
+					{
+						'label':'Input typed checkbox',
+						'type':'checkbox',
+						'multiple':true,
+						'options':[
+							{
+								'name':'foo',
+								'value':1
+							},
+							{
+								'name':'bar',
+								'value':1
+							}
+						]
+					},
+
+					// Radio input
+					{
+						'label':'Input typed radio',
+						'type':'radio',
+						'options':[
+							{
+								'name':'foo',
+								'value':1
+							},
+							{
+								'name':'bar',
+								'value':1
+							}
+						]
+					}
+				];
+
+
+			// Create decorated form when all libs are ready
+			pwf.wi(['decorator'], function() {
+
+				// Create form with elements
+				pwf.create('form', {
+					'parent':pwf.jquery('body'),
+					'elements':inputs
+				});
+
+				// Decorator scans whole page for elements to decorate
+				pwf.decorator.scan();
+
+			});
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
