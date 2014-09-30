@@ -10,7 +10,6 @@
 	},
 	"devDependencies":{
 		"jsdom":"*",
-		"pwf.js":"1.5",
 		"pwf-form":"1.7"
 	},
 	"license":"GPLv3",

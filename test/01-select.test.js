@@ -5,45 +5,16 @@ require('pwf.js');
 describe('event test', function() {
 	before(require('./utils/create_env'));
 
-	it('tests select box change events', function() {
+	it('tests select box deco object constructor', function() {
 		var
-			values = [],
-			input  = pwf.create('input.select', {
-				'parent':pwf.body,
-				'name':'select',
-				'options':[
-					{'name':'1', 'value':1},
-					{'name':'2', 'value':2},
-					{'name':'3', 'value':3},
-				],
-				'on_change':function(val) {
-					values.push(val);
-				}
-			}),
-			deco, current, menu, temp;
+			select  = pwf.create('input.select', {'parent':pwf.body}),
+			changed = pwf.decorator.scan(),
+			tags    = pwf.get_class('jq.abstract.deco').static.tags,
+			test;
 
-		pwf.decorator.scan(input.get_el());
+		assert.equal(changed.length, 1);
+		test = changed.pop();
 
-		deco    = input.get_el('wrapper').find('.deco-select');
-		current = deco.find('.current');
-
-		assert.equal(deco.length, 1);
-		assert.equal(current.length, 1);
-
-		current.click();
-
-		menu = deco.find('.menu');
-
-		menu.find('.val_1').click();
-		assert.equal(values.pop(), 1);
-
-		menu.find('.val_2').click();
-		assert.equal(values.pop(), 2);
-
-		menu.find('.val_1').click();
-		assert.equal(values.pop(), 1);
-
-		menu.find('.val_').click();
-		assert.equal(values.pop(), '');
+		assert.equal(select.get_el('input').hasClass(tags.bound), true);
 	});
 });
