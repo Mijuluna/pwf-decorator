@@ -6,15 +6,29 @@ html {
 
 body {
 	margin:0 auto;
-	padding-top:100px;
+	padding:100px 0;
 	width:500px;
 }
 
+em {
+	text-decoration:underline;
+}
+
 .desc {
+	border-bottom:1px solid #ddd;
 	color:#999;
 	font-size:24px;
 	line-height:30px;
-	margin-bottom:32px;
+	padding-bottom:32px;
+	margin-bottom:16px;
+}
+
+p {
+	margin-bottom:15px;
+}
+
+*:last-child {
+	margin-bottom:0;
 }
 
 .input-label-left {
@@ -55,4 +69,11 @@ body {
 
 .input-label-right label {
 	line-height:22px;
+}
+
+.input-desc {
+	color:#999;
+	line-height:18px;
+	padding-top:10px;
+	margin-left:180px;
 }

@@ -5,27 +5,33 @@
 		<meta http-equiv="content-type" content="text/html; charset=utf-8">
 
 		<!-- pwf.js base -->
-		<script type="text/javascript" src="https://raw.githubusercontent.com/just-paja/pwf.js/master/lib/pwf.js"></script>
-		<script type="text/javascript" src="https://raw.githubusercontent.com/just-paja/pwf.js/master/lib/models/container.js"></script>
-		<script type="text/javascript" src="https://raw.githubusercontent.com/just-paja/pwf.js/master/lib/models/domel.js"></script>
-		<script type="text/javascript" src="https://raw.githubusercontent.com/just-paja/pwf.js/master/lib/models/caller.js"></script>
+		<script type="text/javascript" src="https://rawgit.com/just-paja/pwf.js/master/lib/pwf.js"></script>
+		<script type="text/javascript" src="https://rawgit.com/just-paja/pwf.js/master/lib/models/container.js"></script>
+		<script type="text/javascript" src="https://rawgit.com/just-paja/pwf.js/master/lib/models/domel.js"></script>
+		<script type="text/javascript" src="https://rawgit.com/just-paja/pwf.js/master/lib/models/caller.js"></script>
 
 		<!-- jQuery -->
 		<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-		<script type="text/javascript" src="https://raw.githubusercontent.com/just-paja/pwf-jquery-compat/master/lib/jquery-compat.js"></script>
-		<script type="text/javascript" src="https://raw.githubusercontent.com/just-paja/pwf-jquery-compat/master/lib/objects/domel.js"></script>
+		<script type="text/javascript" src="https://rawgit.com/just-paja/pwf-jquery-compat/master/lib/jquery-compat.js"></script>
+		<script type="text/javascript" src="https://rawgit.com/just-paja/pwf-jquery-compat/master/lib/objects/domel.js"></script>
 		<script type="text/javascript" src="https://rawgit.com/just-paja/pwf-jquery-compat/master/lib/objects/struct.js"></script>
 
 		<!-- Form rendering -->
-		<script type="text/javascript" src="https://raw.githubusercontent.com/just-paja/pwf-form/master/lib/form.js"></script>
-		<script type="text/javascript" src="https://raw.githubusercontent.com/just-paja/pwf-form/master/lib/form/container.js"></script>
-		<script type="text/javascript" src="https://raw.githubusercontent.com/just-paja/pwf-form/master/lib/input.js"></script>
-		<script type="text/javascript" src="https://raw.githubusercontent.com/just-paja/pwf-form/master/lib/input/abstract/options.js"></script>
-		<script type="text/javascript" src="https://raw.githubusercontent.com/just-paja/pwf-form/master/lib/input/abstract/numbers.js"></script>
-		<script type="text/javascript" src="https://raw.githubusercontent.com/just-paja/pwf-form/master/lib/input/hidden.js"></script>
-		<script type="text/javascript" src="https://raw.githubusercontent.com/just-paja/pwf-form/master/lib/input/select.js"></script>
-		<script type="text/javascript" src="https://raw.githubusercontent.com/just-paja/pwf-form/master/lib/input/radio.js"></script>
-		<script type="text/javascript" src="https://raw.githubusercontent.com/just-paja/pwf-form/master/lib/input/checkbox.js"></script>
+		<script type="text/javascript" src="https://rawgit.com/just-paja/pwf-form/master/lib/form.js"></script>
+		<script type="text/javascript" src="https://rawgit.com/just-paja/pwf-form/master/lib/form/container.js"></script>
+
+<!--
+		<script type="text/javascript" src="https://rawgit.com/just-paja/pwf-form/master/lib/input.js"></script>
+-->
+
+		<script type="text/javascript" src="../../pwf-form/lib/input.js"></script>
+
+		<script type="text/javascript" src="https://rawgit.com/just-paja/pwf-form/master/lib/input/abstract/options.js"></script>
+		<script type="text/javascript" src="https://rawgit.com/just-paja/pwf-form/master/lib/input/abstract/numbers.js"></script>
+		<script type="text/javascript" src="https://rawgit.com/just-paja/pwf-form/master/lib/input/hidden.js"></script>
+		<script type="text/javascript" src="https://rawgit.com/just-paja/pwf-form/master/lib/input/select.js"></script>
+		<script type="text/javascript" src="https://rawgit.com/just-paja/pwf-form/master/lib/input/radio.js"></script>
+		<script type="text/javascript" src="https://rawgit.com/just-paja/pwf-form/master/lib/input/checkbox.js"></script>
 
 		<!-- Input decorator -->
 		<script type="text/javascript" src="../lib/abstract/deco.js"></script>
@@ -53,12 +59,20 @@
 		<!-- Create page content -->
 		<script type="text/javascript">
 			var
+				/*
+				 * This is definition of all inputs on this page. You shouldn't
+				 * worry about this. If you're interested in learning more about
+				 * configuration pwf forms, checkout module pwf-form.
+				 *
+				 * https://github.com/just-paja/pwf-form
+				 */
 				inputs = [
 					// Basic select input
 					{
 						'label':'Basic select input',
 						'type':'select',
 						'name':'select-basic',
+						'desc':'Notice that menu of the select input shows up or down depending on which direction has more space',
 						'options':[
 							{
 								'name':'foo',
@@ -78,6 +92,7 @@
 						'multiple':true,
 						'name':'checkbox-multi',
 						'value':[1],
+						'desc':'Checkbox and radio input decorator listens on click and change events directly on input elements and also on itself.',
 						'options':[
 							{
 								'name':'foo',
@@ -95,6 +110,7 @@
 						'label':'Input typed radio',
 						'type':'radio',
 						'name':'radio',
+						'desc':'Radio input decorator automaticaly updates other radio decorators attached to inputs with same name.',
 						'options':[
 							{
 								'name':'foo',
@@ -116,6 +132,7 @@
 						'label':'Overfilled select input',
 						'type':'select',
 						'name':'select-overfilled',
+						'desc':'When you have too many items on select item list, you can simply add <em>overflow:auto</em> to the menu.',
 						'options':[
 							{
 								'name':'foo',
@@ -193,6 +210,7 @@
 	<body>
 		<div class="desc">
 			<p>These decorated inputs always have the same HTML structure. You can check it out using some kind of HTML inspector.</p>
+			<p>There are also inline comments in source of this example.</p>
 		</div>
 	</body>
 </html>
