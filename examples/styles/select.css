@@ -37,6 +37,10 @@
 	z-index:5;
 }
 
+.jq-deco-select .select-menu.on-top {
+	border-radius:3px 3px 0 0;
+}
+
 .jq-deco-select .select-menu-inner {
 	max-height:200px;
 	overflow:auto;
