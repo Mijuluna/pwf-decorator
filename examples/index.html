@@ -205,7 +205,7 @@
 
 			var toggle_inputs = function(e)
 			{
-				var inputs = pwf.jquery('input[type=radio], input[type=checkbox], select');
+				var inputs = pwf.jquery('input[type=radio], input[type=checkbox], select, .el-toggle');
 
 				e.preventDefault();
 				inputs.toggle();
@@ -222,7 +222,7 @@
 
 		<section class="desc">
 			<p>The decorator object always appends itself after the input it decorates.</p>
-			<p><a href="#" class="ui-toggle-inputs">See original inputs</a> to test their interactions.</p>
+			<p><a href="#" class="ui-toggle-inputs"><span class="el-toggle">See</span><span class="el-toggle" style="display:none">Hide</span> original inputs</a> to test their interactions.</p>
 		</section>
 	</body>
 </html>
