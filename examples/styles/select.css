@@ -37,16 +37,21 @@
 }
 
 .jq-deco-select .select-menu {
-	background:#ccc;
-	box-shadow:0 0 50px rgba(0,0,0,.2);
+	background:#fff;
+	border:1px solid #ccc;
+	border-top:none;
 	border-radius:0 0 3px 3px;
+	box-shadow:0 0 50px rgba(0,0,0,.2);
+	color:#666;
 	left:3px;
 	overflow:hidden;
 	z-index:5;
 }
 
 .jq-deco-select .select-menu.on-top {
+	border-bottom:none;
 	border-radius:3px 3px 0 0;
+	border-top:1px solid #ccc;
 }
 
 .jq-deco-select .select-menu-inner {
@@ -56,7 +61,7 @@
 }
 
 .jq-deco-select .jq-deco-select-opt {
-	border-bottom:1px solid #ccc;
+	border-bottom:1px solid #f0f0f0;
 	cursor:pointer;
 	min-width:100px;
 	padding:7px 10px;
