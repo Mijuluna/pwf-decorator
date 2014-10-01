@@ -187,7 +187,7 @@
 
 				// Create form with elements
 				pwf.create('form', {
-					'parent':pwf.jquery('body'),
+					'parent':pwf.jquery('.form-anchor'),
 					'elements':inputs
 				});
 
@@ -199,13 +199,30 @@
 				 */
 				pwf.scan(pwf.jquery(':eq(0)'));
 
+				pwf.jquery('.ui-toggle-inputs').bind('click', toggle_inputs);
 			});
+
+
+			var toggle_inputs = function(e)
+			{
+				var inputs = pwf.jquery('input[type=radio], input[type=checkbox], select');
+
+				e.preventDefault();
+				inputs.toggle();
+			};
 		</script>
 	</head>
 	<body>
-		<div class="desc">
+		<section class="desc">
 			<p>These decorated inputs always have the same HTML structure. You can check it out using some kind of HTML inspector.</p>
 			<p>There are also inline comments in source of this example.</p>
-		</div>
+		</section>
+
+		<section class="form-anchor"></section>
+
+		<section class="desc">
+			<p>The decorator object always appends itself after the input it decorates.</p>
+			<p><a href="#" class="ui-toggle-inputs">See original inputs</a> to test their interactions.</p>
+		</section>
 	</body>
 </html>
