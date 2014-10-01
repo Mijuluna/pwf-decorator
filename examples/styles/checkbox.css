@@ -1,0 +1,31 @@
+.jq-deco-checkbox .checkbox-inner {
+	border:1px solid #ddd;
+	border-radius:5px;
+	cursor:pointer;
+	height:20px;
+	position:relative;
+	width:20px;
+}
+
+.jq-deco-checkbox .checkbox-tick {
+	background:#ddd;
+	border-radius:1px;
+	display:none;
+	height:10px;
+	left:5px;
+	position:absolute;
+	top:5px;
+	width:10px;
+}
+
+.jq-deco-checkbox.checked .checkbox-tick {
+	display:block;
+}
+
+.jq-deco-checkbox:hover .checkbox-inner {
+	border-color:#ccc;
+}
+
+.jq-deco-checkbox:hover .checkbox-tick {
+	background:#999;
+}

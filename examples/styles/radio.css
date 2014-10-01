@@ -1,0 +1,31 @@
+.jq-deco-radio .radio-inner {
+	border:1px solid #ddd;
+	border-radius:20px;
+	cursor:pointer;
+	height:20px;
+	position:relative;
+	width:20px;
+}
+
+.jq-deco-radio .radio-tick {
+	background:#ddd;
+	border-radius:12px;
+	display:none;
+	height:10px;
+	left:5px;
+	position:absolute;
+	top:5px;
+	width:10px;
+}
+
+.jq-deco-radio.checked .radio-tick {
+	display:block;
+}
+
+.jq-deco-radio:hover .radio-inner {
+	border-color:#ccc;
+}
+
+.jq-deco-radio:hover .radio-tick {
+	background:#999;
+}

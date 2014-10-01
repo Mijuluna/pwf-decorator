@@ -1,0 +1,47 @@
+html {
+	font-family:Droid Sans, Arial, sans;
+	font-size:15px;
+}
+
+
+body {
+	margin:0 auto;
+	padding-top:150px;
+	width:500px;
+}
+
+.input-label-left {
+	border-bottom:1px solid #ddd;
+	padding-bottom:10px;
+	margin-bottom:10px;
+}
+
+.input-label-left:last-child {
+	border:none;
+	margin:0;
+	padding:0;
+}
+
+.input-label-right {
+	margin-bottom:5px;
+}
+
+.input-label-right .input-container {
+	margin-right:8px;
+}
+
+.input label,
+.input .input-container
+{
+	display:inline-block;
+	vertical-align:top;
+}
+
+.input label {
+	line-height:25px;
+	width:180px;
+}
+
+.input-label-right label {
+	line-height:22px;
+}

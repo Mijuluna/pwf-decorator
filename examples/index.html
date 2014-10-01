@@ -13,7 +13,8 @@
 		<!-- jQuery -->
 		<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 		<script type="text/javascript" src="https://raw.githubusercontent.com/just-paja/pwf-jquery-compat/master/lib/jquery-compat.js"></script>
-		<script type="text/javascript" src="https://raw.githubusercontent.com/just-paja/pwf-jquery-compat/master/lib/objects/struct.js"></script>
+		<script type="text/javascript" src="https://raw.githubusercontent.com/just-paja/pwf-jquery-compat/master/lib/objects/domel.js"></script>
+		<script type="text/javascript" src="https://rawgit.com/just-paja/pwf-jquery-compat/master/lib/objects/struct.js"></script>
 
 		<!-- Form rendering -->
 		<script type="text/javascript" src="https://raw.githubusercontent.com/just-paja/pwf-form/master/lib/form.js"></script>
@@ -36,14 +37,22 @@
 		<script type="text/javascript" src="../lib/deco/radio.js"></script>
 		<script type="text/javascript" src="../lib/decorator.js"></script>
 
+		<!-- Example styles -->
+		<link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+		<link rel="stylesheet" type="text/css" href="./styles/common.css">
+		<link rel="stylesheet" type="text/css" href="./styles/select.css">
+		<link rel="stylesheet" type="text/css" href="./styles/checkbox.css">
+		<link rel="stylesheet" type="text/css" href="./styles/radio.css">
+
 		<!-- Create page content -->
 		<script type="text/javascript">
 			var
 				inputs = [
-					// Select input
+					// Basic select input
 					{
-						'label':'Input typed select',
+						'label':'Basic select input',
 						'type':'select',
+						'name':'select-basic',
 						'options':[
 							{
 								'name':'foo',
@@ -51,7 +60,7 @@
 							},
 							{
 								'name':'bar',
-								'value':1
+								'value':2
 							}
 						]
 					},
@@ -61,6 +70,7 @@
 						'label':'Input typed checkbox',
 						'type':'checkbox',
 						'multiple':true,
+						'name':'checkbox-multi',
 						'options':[
 							{
 								'name':'foo',
@@ -77,6 +87,7 @@
 					{
 						'label':'Input typed radio',
 						'type':'radio',
+						'name':'radio',
 						'options':[
 							{
 								'name':'foo',
@@ -85,6 +96,63 @@
 							{
 								'name':'bar',
 								'value':1
+							}
+						]
+					},
+
+					// Overfilled select input
+					{
+						'label':'Overfilled select input',
+						'type':'select',
+						'name':'select-overfilled',
+						'options':[
+							{
+								'name':'foo',
+								'value':1
+							},
+							{
+								'name':'bar',
+								'value':2
+							},
+							{
+								'name':'foo',
+								'value':3
+							},
+							{
+								'name':'bar',
+								'value':4
+							},
+							{
+								'name':'foo',
+								'value':5
+							},
+							{
+								'name':'bar',
+								'value':6
+							},
+							{
+								'name':'foo',
+								'value':1
+							},
+							{
+								'name':'bar',
+								'value':2
+							},
+							{
+								'name':'foo',
+								'value':3
+							},
+							{
+								'name':'bar',
+								'value':4
+							},
+							{
+								'name':'foo',
+								'value':5
+							},
+							{
+								'name':'bar',
+								'value':6
 							}
 						]
 					}
