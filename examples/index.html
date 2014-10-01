@@ -173,8 +173,13 @@
 					'elements':inputs
 				});
 
-				// Decorator scans whole page for elements to decorate
-				pwf.decorator.scan();
+				/*
+				 * Tell pwf to do #scan method with all modules that support
+				 * scanning DOM. Decorator is one of them. It scans whole page for
+				 * input elements to decorate.
+				 * Alternative way to do this is 'pwf.decorator.scan();'
+				 */
+				pwf.scan(pwf.jquery(':eq(0)'));
 
 			});
 		</script>
