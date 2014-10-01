@@ -11,6 +11,10 @@
 	position:relative;
 }
 
+.jq-deco-select .select-label .select-text {
+	color:#999;
+}
+
 .jq-deco-select .select-button {
 	background:#ddd;
 	height:14px;
@@ -22,6 +26,10 @@
 
 .jq-deco-select:hover .select-box {
 	border-color:#ccc;
+}
+
+.jq-deco-select:hover .select-label .select-text {
+	color:#666;
 }
 
 .jq-deco-select:hover .select-button {
