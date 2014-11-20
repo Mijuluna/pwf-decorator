@@ -1,6 +1,10 @@
 var dom = require('jsdom');
 
 module.exports = function(next) {
+	if (typeof pwf == 'undefined') {
+		require('pwf.js');
+	}
+
 	if (typeof pwf.window == 'undefined') {
 		dom.defaultDocumentFeatures = {
 			'FetchExternalResources':['script'],
@@ -11,8 +15,10 @@ module.exports = function(next) {
 
 		pwf.document = dom.jsdom('<html><head></head><body></body></html>');
 
-		if (typeof pwf.document.createWindow == 'function') {
+		if (pwf.document.createWindow instanceof Function) {
 			pwf.window = pwf.document.createWindow();
+		} else {
+			pwf.window = pwf.document.parentWindow;
 		}
 
 		global.document = pwf.document;
@@ -36,5 +42,12 @@ module.exports = function(next) {
 		delete global.window;
 	}
 
-	return pwf.wcr(['form', 'input'], next);
+	return pwf.wait_for('class', [
+		'form',
+		'input',
+		'jq.abstract.deco',
+		'jq.deco.select',
+		'jq.deco.checkbox',
+		'jq.deco.radio'
+	], next);
 };
