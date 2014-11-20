@@ -21,6 +21,8 @@
 		"url":"https://github.com/just-paja/pwf-decorator.git"
 	},
 
+	"main":"lib/include.js",
+
 	"include":[
 		"lib/decorator",
 		"lib/abstract",
