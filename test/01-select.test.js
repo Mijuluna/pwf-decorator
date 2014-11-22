@@ -1,7 +1,5 @@
 var assert = require('assert');
 
-require('pwf.js');
-
 describe('event test', function() {
 	before(require('./utils/create_env'));
 
@@ -9,7 +7,7 @@ describe('event test', function() {
 		var
 			select  = pwf.create('input.select', {'parent':pwf.body}),
 			changed = pwf.decorator.scan(),
-			tags    = pwf.get_class('jq.abstract.deco').static.tags,
+			tags    = pwf.get_class('jq.abstract.deco').tags,
 			test;
 
 		assert.equal(changed.length, 1);
